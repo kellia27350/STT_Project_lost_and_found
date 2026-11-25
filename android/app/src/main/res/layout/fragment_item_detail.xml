@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Badges row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:id="@+id/tv_report_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Item name -->
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/on_surface"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Category -->
+        <TextView
+            android:id="@+id/tv_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginBottom="16dp" />
+
+        <View android:layout_width="match_parent" android:layout_height="1dp"
+            android:background="@color/divider" android:layout_marginBottom="16dp"/>
+
+        <!-- Location row -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="📍 Location" android:textStyle="bold" android:textSize="13sp"
+            android:textColor="@color/text_secondary" android:layout_marginBottom="2dp"/>
+        <TextView android:id="@+id/tv_location" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:textSize="15sp"
+            android:textColor="@color/on_surface" android:layout_marginBottom="12dp"/>
+
+        <!-- Date row -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="📅 Date reported" android:textStyle="bold" android:textSize="13sp"
+            android:textColor="@color/text_secondary" android:layout_marginBottom="2dp"/>
+        <TextView android:id="@+id/tv_date" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:textSize="15sp"
+            android:textColor="@color/on_surface" android:layout_marginBottom="12dp"/>
+
+        <!-- Description row -->
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="📝 Description" android:textStyle="bold" android:textSize="13sp"
+            android:textColor="@color/text_secondary" android:layout_marginBottom="2dp"/>
+        <TextView android:id="@+id/tv_description" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:textSize="15sp"
+            android:textColor="@color/on_surface" android:layout_marginBottom="20dp"/>
+
+        <!-- Privacy notice -->
+        <androidx.cardview.widget.CardView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#FFF8E1"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp"
+            android:layout_marginBottom="20dp">
+            <TextView
+                android:id="@+id/tv_privacy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/privacy_notice"
+                android:textSize="12sp"
+                android:textColor="#5D4037"
+                android:padding="12dp" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Claim explanation field (visible only for FOUND+AVAILABLE) -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_explanation"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/claim_explanation_hint"
+            android:layout_marginBottom="12dp"
+            android:visibility="gone">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_explanation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:minLines="3"
+                android:gravity="top" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Submit claim button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_claim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/submit_claim"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone" />
+
+        <!-- Mark returned button (owner / admin) -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_mark_returned"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mark_returned"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone" />
+
+        <!-- Result message -->
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/status_available_text"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</ScrollView>

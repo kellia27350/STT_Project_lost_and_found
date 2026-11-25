@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.auca.lostandfound.integration.ItemIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.448 s -- in com.auca.lostandfound.integration.ItemIntegrationTest

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.auca.lostandfound.integration.AdminIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.55 s -- in com.auca.lostandfound.integration.AdminIntegrationTest
